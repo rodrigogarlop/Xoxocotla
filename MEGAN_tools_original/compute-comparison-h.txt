@@ -1,0 +1,23 @@
+compute-comparison -h
+SYNOPSIS
+        CompareFiles [options]
+DESCRIPTION
+        Computes the comparison of multiple megan, RMA or meganized DAA files
+OPTIONS
+ Input and Output:
+        -i, --in [string(s)]                 Input RMA and/or meganized DAA files (single directory ok). Mandatory option.
+        -o, --out [string]                   Output file. Default value: comparison.megan
+        -mdf, --metaDataFile [string]        Metadata file.
+ Options:
+        -s, --allowSameNames                 All the same sample name to appear multiple times (will add -1, -2 etc). Default value: false.
+        -n, --normalize                      Normalize counts. Default value: true.
+        -iu, --ignoreUnassignedReads         Ignore unassigned, no-hit or contaminant reads. Default value: false.
+        -k1, --keepOne                       In a normalized comparison, non-zero counts are mapped to 1 or more. Default value: false.
+ Other:
+        -v, --verbose                        Echo commandline options and be verbose. Default value: false.
+        -h, --help                           Show program usage and quit.
+AUTHOR(s)
+        Daniel H. Huson.
+VERSION
+        MEGAN Community Edition (version 6.21.3, built 17 Apr 2021).
+Copyright (C) 2021 Daniel H. Huson. This program comes with ABSOLUTELY NO WARRANTY..

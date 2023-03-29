@@ -1,0 +1,30 @@
+rma2info -h
+SYNOPSIS
+        RMA2Info [options]
+DESCRIPTION
+        Analyses an RMA file
+OPTIONS
+ Input and Output
+        -i, --in [string]                    Input RMA file. Mandatory option.
+        -o, --out [string]                   Output file (stdout or .gz ok). Default value: stdout
+ Commands
+        -l, --list                           List general info about file. Default value: false.
+        -m, --listMore                       List more info about file (if meganized). Default value: false.
+        -c2c, --class2count [string(s)]      List class to count for named classification(s) (Possible values: EC EGGNOG GTDB INTERPRO2GO KEGG SEED Taxonomy).
+        -r2c, --read2class [string(s)]       List read to class assignments for named classification(s) (Possible values: EC EGGNOG GTDB INTERPRO2GO KEGG SEED Taxonomy).
+        -n, --names                          Report class names rather than class Id numbers. Default value: false.
+        -p, --paths                          Report class paths rather than class Id numbers. Default value: false.
+        -r, --ranks                          When reporting taxonomy, report taxonomic rank using single letter (K for Kingdom, P for Phylum etc). Default value: false.
+        -mro, --majorRanksOnly               Only use major taxonomic ranks. Default value: false.
+        -bo, --bacteriaOnly                  Only report bacterial reads and counts in taxonomic report. Default value: false.
+        -vo, --virusOnly                     Only report viral reads and counts in taxonomic report. Default value: false.
+        -u, --ignoreUnassigned               Don't report on reads that are unassigned. Default value: true.
+        -es, --extractSummaryFile [string]   Output a MEGAN summary file (contains all classifications, but no reads or alignments).
+ Other:
+        -v, --verbose                        Echo commandline options and be verbose. Default value: false.
+        -h, --help                           Show program usage and quit.
+AUTHOR(s)
+        Daniel H. Huson.
+VERSION
+        MEGAN Community Edition (version 6.21.3, built 17 Apr 2021).
+Copyright (C) 2021 Daniel H. Huson. This program comes with ABSOLUTELY NO WARRANTY..

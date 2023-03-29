@@ -1,0 +1,75 @@
+blast2rma -h
+SYNOPSIS
+        Blast2RMA [options]
+DESCRIPTION
+        Computes MEGAN RMA files from  BLAST (or similar) files
+OPTIONS
+ Input
+        -i, --in [string(s)]                 Input BLAST file[s] (.gz ok). Mandatory option.
+        -f, --format [string]                Input file format. Mandatory option. Legal values: Unknown, DAA, BlastText, BlastXML, BlastTab, LastMAF, RapSearch2Aln, IlluminaReporter, RDPAssignmentDetails, RDPStandalone, Mothur, SAM, References_as_FastA
+        -bm, --blastMode [string]            Blast mode. Default value: Unknown Legal values: Unknown, BlastN, BlastP, BlastX, Classifier
+        -r, --reads [string(s)]              Reads file(s) (fasta or fastq, .gz ok).
+        -mdf, --metaDataFile [string(s)]     Files containing metadata to be included in RMA6 files.
+ Output
+        -o, --out [string(s)]                Output file(s), one for each input file, or a directory. Mandatory option.
+        -c, --useCompression                 Compress reads and matches in RMA file (smaller files, longer to generate. Default value: true.
+ Reads
+        -p, --paired                         Reads are paired. Default value: false.
+        -ps, --pairedSuffixLength [number]   Length of name suffix used to distinguish between name of read and its mate. Default value: 0.
+        -pof, --pairedReadsInOneFile         Are paired reads in one file (usually they are in two). Default value: false.
+ Parameters
+        -lg, --longReads                     Parse and analyse as long reads. Default value: false.
+        -m, --maxMatchesPerRead [number]     Max matches per read. Default value: 100.
+        -class, --classify                   Run classification algorithm. Default value: true.
+        -ms, --minScore [number]             Min score. Default value: 50.0.
+        -me, --maxExpected [number]          Max expected. Default value: 0.01.
+        -mpi, --minPercentIdentity [number]   Min percent identity. Default value: 0.0.
+        -top, --topPercent [number]          Top percent. Default value: 10.0.
+        -supp, --minSupportPercent [number]   Min support as percent of assigned reads (0==off). Default value: 0.05.
+        -sup, --minSupport [number]          Min support (0==off). Default value: 0.
+        -mrc, --minPercentReadCover [number]   Min percent of read length to be covered by alignments. Default value: 0.0.
+        -mrefc, --minPercentReferenceCover [number]   Min percent of reference length to be covered by alignments. Default value: 0.0.
+        -mrl, --minReadLength [number]       Minimum read length. Default value: 0.
+        -alg, --lcaAlgorithm [string]        Set the LCA algorithm to use for taxonomic assignment. Default value: naive Legal values: naive, weighted, longReads
+        -lcp, --lcaCoveragePercent [number]   Set the percent for the LCA to cover. Default value: 100.0.
+        -ram, --readAssignmentMode [string]   Set the read assignment mode. Default value: alignedBases in long read mode, readCount else
+        -cf, --conFile [string]              File of contaminant taxa (one Id or name per line).
+ Classification support:
+        -mdb, --mapDB [string]               MEGAN mapping db (file megan-map.db).
+        -on, --only [string(s)]              Use only named classifications (if not set: use all).
+ Deprecated classification support:
+        -tn, --parseTaxonNames               Parse taxon names. Default value: true.
+        -a2t, --acc2taxa [string]            Accessopm-to-Taxonomy mapping file.
+        -s2t, --syn2taxa [string]            Synonyms-to-Taxonomy mapping file.
+        -t4t, --tags4taxonomy [string]       Tags for taxonomy id parsing (must set to activate id parsing).
+        -a2ec, --acc2ec [string]             Accession-to-EC mapping file.
+        -s2ec, --syn2ec [string]             Synonyms-to-EC mapping file.
+        -t4ec, --tags4ec [string]            Tags for EC id parsing (must set to activate id parsing).
+        -a2eggnog, --acc2eggnog [string]     Accession-to-EGGNOG mapping file.
+        -s2eggnog, --syn2eggnog [string]     Synonyms-to-EGGNOG mapping file.
+        -t4eggnog, --tags4eggnog [string]    Tags for EGGNOG id parsing (must set to activate id parsing).
+        -a2gtdb, --acc2gtdb [string]         Accession-to-GTDB mapping file.
+        -s2gtdb, --syn2gtdb [string]         Synonyms-to-GTDB mapping file.
+        -t4gtdb, --tags4gtdb [string]        Tags for GTDB id parsing (must set to activate id parsing).
+        -a2interpro2go, --acc2interpro2go [string]   Accession-to-INTERPRO2GO mapping file.
+        -s2interpro2go, --syn2interpro2go [string]   Synonyms-to-INTERPRO2GO mapping file.
+        -t4interpro2go, --tags4interpro2go [string]   Tags for INTERPRO2GO id parsing (must set to activate id parsing).
+        -a2kegg, --acc2kegg [string]         Accession-to-KEGG mapping file.
+        -s2kegg, --syn2kegg [string]         Synonyms-to-KEGG mapping file.
+        -t4kegg, --tags4kegg [string]        Tags for KEGG id parsing (must set to activate id parsing).
+        -a2seed, --acc2seed [string]         Accession-to-SEED mapping file.
+        -s2seed, --syn2seed [string]         Synonyms-to-SEED mapping file.
+        -t4seed, --tags4seed [string]        Tags for SEED id parsing (must set to activate id parsing).
+        -fwa, --firstWordIsAccession         First word in reference header is accession number (set to 'true' for NCBI-nr downloaded Sep 2016 or later). Default value: true.
+        -atags, --accessionTags [string(s)]   List of accession tags. Default value(s): 'gb|' 'ref|'.
+ Other:
+        -t, --threads [number]               Number of threads. Default value: 8.
+        -tsm, --tempStoreInMemory            Temporary storage in memory for SQLITE. Default value: false.
+        -tsd, --tempStoreDir [string]        Temporary storage directory for SQLITE (if not in-memory).
+        -v, --verbose                        Echo commandline options and be verbose. Default value: false.
+        -h, --help                           Show program usage and quit.
+AUTHOR(s)
+        Daniel H. Huson.
+VERSION
+        MEGAN Community Edition (version 6.21.3, built 17 Apr 2021).
+Copyright (C) 2021 Daniel H. Huson. This program comes with ABSOLUTELY NO WARRANTY..
